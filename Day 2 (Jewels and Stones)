@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int numJewelsInStones(string J, string S) {
+        unordered_set<char> jewelSet;
+        int count = 0;
+        for(char c:J)
+        {
+            jewelSet.insert(c);
+        }
+        for(char c:S)
+        {
+            if(jewelSet.find(c)!=jewelSet.end())
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+};
