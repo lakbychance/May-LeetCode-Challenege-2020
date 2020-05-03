@@ -1,0 +1,22 @@
+class Solution {
+public:
+    bool canConstruct(string ransomNote, string magazine) {
+        unordered_map<char,int> cache;
+        for(char c:magazine)
+        {
+            cache[c]+=1;
+        }
+        for(char c:ransomNote)
+        {
+            if(cache.find(c)!=cache.end() && cache[c]>0)
+            {
+                cache[c]--;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+};
