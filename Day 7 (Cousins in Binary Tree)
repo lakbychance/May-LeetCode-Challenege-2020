@@ -1,0 +1,30 @@
+class Solution {
+public:
+    void helper(TreeNode* root,int depth,int element,TreeNode* parent,pair<TreeNode *,int>& data)
+    {
+        if(root==NULL)
+        {
+          return;  
+        }
+        if(element==root->val)
+        {
+          data.first = parent;
+          data.second = depth;  
+          return;
+        }
+        helper(root->left,depth+1,element,root,data);
+        helper(root->right,depth+1,element,root,data);
+    }
+    bool isCousins(TreeNode* root, int x, int y) {
+            pair<TreeNode *,int> xData;
+            pair<TreeNode *,int> yData;
+            helper(root,0,x,NULL,xData);
+            helper(root,0,y,NULL,yData);
+            if(xData.second == yData.second && xData.first->val!=yData.first->val)
+            {
+                return true;
+            }
+        return false;
+        
+    }
+};
