@@ -11,3 +11,4 @@ A collection of solutions for the May LeetCoding Challenge 2020.
 | 6 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/534/week-1-may-1st-may-7th/3321/  | Easy  | NA | HashMap | O(n) | O(n) | Within 15 mins | Moore's voting algo. Only Applicable if majority element always exist. Time Complexity - O(n), Space Complexity - O(1) |
 | 7 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/534/week-1-may-1st-may-7th/3322/  | Easy  | Tree traversal(DFS) | NA | O(n) | O(1) | Within 45 mins | NA |
 | 8 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3323/  | Easy  | Basic Linear Algebra (y=mx+c) | NA | O(n) | O(1) | Within 15 mins | NA |
+| 9 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3324/  | Easy  | Binary Search | NA | O(logn) | O(1) | Within 15 mins | NA |
