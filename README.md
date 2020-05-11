@@ -13,3 +13,4 @@ A collection of solutions for the May LeetCoding Challenge 2020.
 | 8 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3323/  | Easy  | Basic Linear Algebra (y=mx+c) | NA | O(n) | O(1) | Within 15 mins | NA |
 | 9 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3324/  | Easy  | Binary Search | NA | O(logn) | O(1) | Within 15 mins | NA |
 | 10 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3325/  | Easy  | NA | array as hashmap | O(n) | O(n) | Within 25 mins | NA |
+| 11 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3326/  | Easy  | BFS | NA | O(m * n) | O(1) | Within 45 mins | NA |
