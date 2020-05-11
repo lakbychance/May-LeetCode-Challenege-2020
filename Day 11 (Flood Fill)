@@ -1,0 +1,41 @@
+class Solution {
+public:
+    vector<pair<int,int>> getUncoloredPixels(int sr,int sc,vector<vector<int>>& image,int &srcColor,int &newColor)
+    {
+        vector<pair<int,int>> uncoloredPixels;
+        if(sr-1>=0 && image[sr-1][sc]==srcColor)
+            uncoloredPixels.push_back({sr-1,sc});
+        if(sr+1<image.size() && image[sr+1][sc]==srcColor)
+            uncoloredPixels.push_back({sr+1,sc});
+        if(sc-1>=0 && image[sr][sc-1]==srcColor)
+            uncoloredPixels.push_back({sr,sc-1});
+        if(sc+1<image[0].size() && image[sr][sc+1]==srcColor)
+            uncoloredPixels.push_back({sr,sc+1});
+        return uncoloredPixels;
+    }
+    
+    vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int newColor) {
+        queue<pair<int,int>> pixelQueue;
+        pixelQueue.push({sr,sc});
+        int srcColor = image[sr][sc];
+        while(!pixelQueue.empty())
+        {
+            pair<int,int> currentPixel = pixelQueue.front();
+            pixelQueue.pop();
+            int x = currentPixel.first;
+            int y = currentPixel.second;
+            if(image[x][y]==newColor)
+                continue;
+            if(image[x][y]==srcColor)
+            {
+            image[x][y] = newColor;
+            vector<pair<int,int>> uncoloredPixels = getUncoloredPixels(x,y,image,srcColor,newColor);
+            for(pair<int,int> pixel:uncoloredPixels)
+            {
+                pixelQueue.push(pixel);
+            }
+            }
+        }
+        return image;
+    }
+};
