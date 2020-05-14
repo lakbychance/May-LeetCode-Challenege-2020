@@ -1,0 +1,50 @@
+class Solution {
+public:
+    set<string>read;
+    string helper(string num,int k)
+    {
+        
+        if(k==num.length())
+            return "0";
+        if(k==0)
+            return num;
+        int i = 0;
+            while(k>0)
+            {
+        
+               if(k>=num.length())
+                break;
+                if(num[i]<=num[i+1])
+                {
+                   i++;
+                }
+                else
+                {
+                    num = num.substr(0,i)+num.substr(i+1);
+                    k--;
+                    if(i>0)
+                    {
+                        i--;
+                    }
+                }
+            }
+        string finalResult = "";
+        for(int i = 0;i<num.length();i++)
+        {
+            if(num[i]!='0')
+            {
+                finalResult = num.substr(i);
+                break;
+            }
+        }
+        
+        if(finalResult=="")
+            return "0";
+        return finalResult;
+        
+    }
+    string removeKdigits(string num, int k) {
+       return helper(num,k);
+        
+    }
+};
