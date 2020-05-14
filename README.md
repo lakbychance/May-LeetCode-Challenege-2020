@@ -16,4 +16,4 @@ A collection of solutions for the May LeetCoding Challenge 2020.
 | 11 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3326/  | Easy  | BFS | NA | O(m * n) | O(1) | Within 45 mins | NA |
 | 12 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3327/  | Easy  | Binary Search | NA | O(logn) | O(1) | Within 25 mins | NA |
 | 13 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3328/  | Hard  | NA | NA | O(nk) | O(1) | Indefinite | NA (Better approach is there. Have to investigate) |
-| 14 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3329/  | Medium  | NA | HashMap | O(n) insertion and deletion | O(26^n) worst case for small letter alphabets | 50 minutes | Prefix Tries |
+| 14 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3329/  | Medium  | NA | HashMap | O(n) insertion and search | O(26^n) worst case for small letter alphabets | 50 minutes | Prefix Tries |
