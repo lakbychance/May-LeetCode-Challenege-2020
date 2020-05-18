@@ -1,0 +1,34 @@
+class Solution {
+public:
+
+    vector<int> findAnagrams(string s, string p) {
+        if(s=="" || s.length()<p.length())
+            return vector<int>{};
+        vector<int>result;
+        map<char,int> cache;
+        int start = 0;
+        int end = 0;
+        for(int i = 0;i<p.length();i++)
+        {
+            cache[p[i]]++;
+        }
+        while(end<s.length())
+        {
+            if(cache[s[end]])
+            {
+                cache[s[end++]]--;
+                if(end-start==p.length())
+                {
+                    result.push_back(start);
+                }
+            }
+            else if(start==end)
+            {
+                start++;
+                end++;
+            }
+            else cache[s[start++]]++;
+        }
+        return result;
+    }
+};
