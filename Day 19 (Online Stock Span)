@@ -1,0 +1,45 @@
+class StockSpanner {
+public:
+    vector<pair<int,int>>stockPrice;
+    int days = -1;
+    StockSpanner() {
+        
+    }
+    
+    int next(int price) {
+        int best = 1;
+        if(stockPrice.size()==0)
+        {
+            stockPrice.push_back({price,1});
+        }
+        else if(stockPrice.size()==1)
+        {
+            best = price>=stockPrice[0].first?2:1;
+            stockPrice.push_back({price,best});
+        }
+        else {
+          if(price<stockPrice[days].first)
+          {
+              stockPrice.push_back({price,1});
+          }
+            else if(price>=stockPrice[days].first)
+            {
+                int i = stockPrice.size();
+                while(i>0 && price>=stockPrice[i-1].first)
+                {
+                    best+=stockPrice[i-1].second;
+                    i-=stockPrice[i-1].second;
+                }
+                stockPrice.push_back({price,best});
+            }
+        }
+        days++;
+        return best;
+    }
+};
+
+/**
+ * Your StockSpanner object will be instantiated and called as such:
+ * StockSpanner* obj = new StockSpanner();
+ * int param_1 = obj->next(price);
+ */
