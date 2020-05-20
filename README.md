@@ -22,3 +22,4 @@ A collection of solutions for the May LeetCoding Challenge 2020.
 | 17 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/536/week-3-may-15th-may-21st/3332/ | Hard  | NA | HashMap | O(p+s) | O(26)| Indefinite | Sliding window using HashMap |
 | 18 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/536/week-3-may-15th-may-21st/3331/  | Easy  | NA | HashMap | O(s1+s2) | O(26)| Within 5 minutes (Lol same as Anagram ques from yesterday) | NA |
 | 19 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/536/week-3-may-15th-may-21st/3334/  | Medium-Hard  | NA | NA | O(Q+no of jumps) | O(Q)| Indefinite | Could have stack based approach and reduced code. But the logic is similar to the solution I proposed. |
+| 20 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/536/week-3-may-15th-may-21st/3335/  | Easy  | DFS(Inorder Traversal) | NA | O(N) | O(N)(Recursion stack)| Within 15 minutes | NA |
