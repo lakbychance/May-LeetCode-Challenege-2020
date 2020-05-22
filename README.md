@@ -24,3 +24,4 @@ A collection of solutions for the May LeetCoding Challenge 2020.
 | 19 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/536/week-3-may-15th-may-21st/3334/  | Medium-Hard  | NA | NA | O(Q+no of jumps) | O(Q)| Indefinite | Could have stack based approach and reduced code. But the logic is similar to the solution I proposed. |
 | 20 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/536/week-3-may-15th-may-21st/3335/  | Easy  | DFS(Inorder Traversal) | NA | O(N) | O(N)(Recursion stack)| Within 15 minutes | NA |
 | 21 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/536/week-3-may-15th-may-21st/3336/  | Easy  | NA | NA | O(N*M) via DP | O(1)| Within 15 minutes | NA |
+| 22 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/537/week-4-may-22nd-may-28th/3337/  | Easy  | NA | HashMap via vector | O(nlogn) where n = 128 | O(128)| Within 25 minutes | NA |
