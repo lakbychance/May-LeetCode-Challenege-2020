@@ -1,0 +1,30 @@
+class Solution {
+public:
+    string frequencySort(string s) {
+        vector<pair<char,int>> freq(128,{'*',-1});
+        string result = "";
+        for(char letter:s)
+        {
+            if(freq[letter-0].second!=-1)
+            {
+                freq[letter-0].second++;
+            }
+            else
+            {
+                freq[letter-0]={letter,1};
+            }
+        }
+        sort(freq.begin(),freq.end(),[](pair<char,int> elem1,pair<char,int> elem2)->bool{
+            return elem1.second>elem2.second;
+        });
+        for(pair<char,int> elem:freq)
+        {
+            if(elem.first!='*')
+            {
+                while(elem.second--)
+                    result+=elem.first;
+            }
+        }
+        return result;
+    }
+};
