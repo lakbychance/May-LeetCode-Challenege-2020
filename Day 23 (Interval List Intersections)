@@ -1,0 +1,65 @@
+class Solution {
+public:
+    vector<vector<int>> solve(vector<vector<int>>& A, vector<vector<int>>& B)
+    {
+        vector<vector<int>> result;
+         for(vector<int> pairB:B)
+        {
+            A.push_back(pairB);
+        }
+        sort(A.begin(),A.end(),[](vector<int>elem1,vector<int>elem2)->bool{
+            return elem1[0]<elem2[0];
+        });
+
+        if(A.size()>0)
+        {
+        int max = A[0][1];
+        for(int i = 1;i<A.size();i++)
+        {
+            if(A[i][0]<=max)
+            {
+                if(A[i][1]<=max)
+                    result.push_back({A[i][0],A[i][1]});
+                if(A[i][1]>max)
+                {
+                    result.push_back({A[i][0],max});
+                    max = A[i][1];
+                }
+            }
+            else 
+            {
+                max = A[i][1];
+            }
+            
+        }
+        }
+                return result;
+    }
+    vector<vector<int>> solve2(vector<vector<int>>& A, vector<vector<int>>& B)
+    {
+        int i = 0;
+        int j = 0;
+        vector<vector<int>> result;
+        while(i<A.size() && j<B.size())
+        {
+            int low = max(A[i][0],B[j][0]);
+            int high = min(A[i][1],B[j][1]);
+            if(low<=high)
+            {
+                result.push_back({low,high});
+            }
+            if(A[i][1]>B[j][1])
+            {
+                j++;
+            }
+            else
+            {
+                i++;
+            }
+        }
+        return result;
+    }
+    vector<vector<int>> intervalIntersection(vector<vector<int>>& A, vector<vector<int>>& B) {
+        return solve2(A,B);
+    }
+};
