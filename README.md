@@ -26,3 +26,5 @@ A collection of solutions for the May LeetCoding Challenge 2020.
 | 21 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/536/week-3-may-15th-may-21st/3336/  | Easy  | NA | NA | O(N*M) via DP | O(1)| Within 15 minutes | NA |
 | 22 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/537/week-4-may-22nd-may-28th/3337/  | Easy  | NA | HashMap via vector | O(nlogn) where n = 128 | O(128)| Within 25 minutes | NA |
 | 23 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/537/week-4-may-22nd-may-28th/3338/  | Medium  | NA | NA | O(m+n)| O(m+n)| Within 90 minutes | NA |
+| 24 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/537/week-4-may-22nd-may-28th/3339/  | Hard  | HashMap | NA | O(n)| O(n)| Indefinite | NA |
+| 25 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/537/week-4-may-22nd-may-28th/3340/  | Medium  | NA used DP | NA | O(m+n)| O(m+n)| Within 120 minutes | NA |
