@@ -1,0 +1,46 @@
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution {
+public:    
+    
+    TreeNode* bstFromPreorder(vector<int>& preorder) {
+        unordered_map<int,pair<TreeNode*,pair<int,int>>> bst;
+        TreeNode *root = new TreeNode(preorder[0]);
+        bst[preorder[0]] = {root,{INT_MIN,INT_MAX}};
+        for(int i = 1;i<preorder.size();i++)
+        {
+            int currentElement = preorder[i];
+            int previousElement = preorder[i-1];
+            while(true)
+                {
+                
+                    int leftParentValue = bst[previousElement].second.first;
+                    int rightParentValue = bst[previousElement].second.second;
+                    if(currentElement<previousElement)
+                        {
+                            TreeNode *currentNode = new TreeNode(currentElement);
+                            bst[currentElement]  = {currentNode,{leftParentValue,previousElement}};
+                            bst[previousElement].first->left = currentNode;
+                            break;
+                        }
+                    else if(currentElement>previousElement && currentElement<rightParentValue) 
+                        {
+                            TreeNode *currentNode = new TreeNode(currentElement);
+                            bst[currentElement]={currentNode,{previousElement,rightParentValue}};
+                            bst[previousElement].first->right = currentNode;
+                            break;
+                        }
+                    else previousElement = rightParentValue;
+          
+                }
+    }
+        return root;
+    }
+};
