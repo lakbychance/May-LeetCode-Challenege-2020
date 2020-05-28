@@ -28,3 +28,5 @@ A collection of solutions for the May LeetCoding Challenge 2020.
 | 23 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/537/week-4-may-22nd-may-28th/3338/  | Medium  | NA | NA | O(m+n)| O(m+n)| Within 90 minutes | NA |
 | 24 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/537/week-4-may-22nd-may-28th/3339/  | Hard  | HashMap | NA | O(n)| O(n)| Indefinite | NA |
 | 25 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/537/week-4-may-22nd-may-28th/3340/  | Medium  | NA used DP | NA | O(m+n)| O(m+n)| Within 120 minutes | NA |
+| 26 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/537/week-4-may-22nd-may-28th/3341/  | Hard  | NA | HashMap | O(n)| O(n)| Indefinite | NA |
+| 27 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/537/week-4-may-22nd-may-28th/3342/  | Hard  | BFS | HashMap as adjacency list | O(V+E)| O(V+E)| Indefinite| Brief about Bipartite Graphs |
