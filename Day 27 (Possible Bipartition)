@@ -1,0 +1,45 @@
+class Solution {
+public:
+   
+    bool possibleBipartition(int N, vector<vector<int>>& dislikes) {
+        vector<char>colorPerson(N+1,'0');
+        unordered_map<int,vector<int>> dislikeCache;
+        for(vector<int>dislike:dislikes)
+        {
+            dislikeCache[dislike[0]].push_back(dislike[1]);
+        }
+        colorPerson[1] = 'B';
+        queue<int> bfsQ;
+        bfsQ.push(1);
+        while(!bfsQ.empty())
+        {
+            int person = bfsQ.front();
+            if(person>N)
+                break;
+            vector<int> dislikedPeople = dislikeCache[person];
+            bfsQ.pop();
+            for(int dislikePerson:dislikedPeople)
+            {
+                if(colorPerson[dislikePerson]=='0')
+                {
+                if(colorPerson[person]=='B')
+                {
+                    colorPerson[dislikePerson]='G';
+                }
+                else if(colorPerson[person]=='G')
+                {
+                    colorPerson[dislikePerson]='B';
+                }    
+                    bfsQ.push(dislikePerson);
+                }
+                if(colorPerson[person]==colorPerson[dislikePerson])
+                        return false;
+            }
+            if(dislikedPeople.size()==0 && bfsQ.empty())
+            {
+                bfsQ.push(person+1);
+            }
+        }
+                   return true;
+    }
+};
