@@ -1,0 +1,38 @@
+class Solution {
+public:
+    
+    bool isCycle(int i,unordered_map<int,vector<int>> &dep,vector<int>&visited)
+    {
+        if(visited[i]==1)
+            return false;
+        if(visited[i]==-1)
+            return true;
+        visited[i] = -1;
+        bool ans = false;
+        for(int j:dep[i])
+        {
+            ans = ans | isCycle(j,dep,visited);
+        }
+        visited[i] = 1;
+        return ans;
+    }
+    bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
+        unordered_map<int,vector<int>> dep;
+        vector<int>visited(numCourses,0);
+        for(int i = 0;i<prerequisites.size();i++)
+        {
+            dep[prerequisites[i][0]].push_back(prerequisites[i][1]);
+        }
+        for(int i = 0;i<numCourses;i++)
+        {
+
+                if(isCycle(i,dep,visited))
+                {
+                    return false;
+                }
+        }
+        
+        return true;
+        
+    }
+};
