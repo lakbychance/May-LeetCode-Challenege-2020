@@ -32,3 +32,5 @@ A collection of solutions for the May LeetCoding Challenge 2020.
 | 27 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/537/week-4-may-22nd-may-28th/3342/  | Hard  | BFS | HashMap as adjacency list | O(V+E)| O(V+E)| Indefinite| Brief about Bipartite Graphs |
 | 28 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/537/week-4-may-22nd-may-28th/3343/  | Easy  | Dynamic Programming | NA | O(n)| O(n)| Within 25 minutes| NA |
 | 29 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/538/week-5-may-29th-may-31st/3344/  | Hard  | DFS graph coloring | HashMap as Adjacency List | O(V+E)| O(V+E)| Indefinite | Topological sorting|
+| 30 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/538/week-5-may-29th-may-31st/3345/  | Easy  | NA | ordered HashMap | O(NlogN)| O(N)| Within 15 minutes | NA |
+| 31 | https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/538/week-5-may-29th-may-31st/3346/  | Medium  | Dyanmic Programming | NA | O(n*m)| O(n*m)| Within 15 minutes | NA |
