@@ -1,0 +1,29 @@
+class Solution {
+public:
+    int minDistance(string word1, string word2) {
+      vector<vector<int>> editDistance(word1.length()+1,vector<int>(word2.length()+1,0));
+      for(int i = 1;i<=word1.length();i++)
+      {
+          editDistance[i][0]=i;
+      }
+        for(int j = 1;j<=word2.length();j++)
+        {
+            editDistance[0][j]=j;
+        }
+        for(int i = 1;i<=word1.length();i++)
+        {
+            for(int j = 1;j<=word2.length();j++)
+            {
+                if(word1[i-1]==word2[j-1])
+                {
+                    editDistance[i][j] = editDistance[i-1][j-1];
+                }
+                else
+                {
+                   editDistance[i][j] = 1+min(editDistance[i-1][j],min(editDistance[i][j-1],editDistance[i-1][j-1])); 
+                }
+            }
+        }
+        return editDistance[word1.length()][word2.length()];
+    }
+};
