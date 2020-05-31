@@ -1,0 +1,29 @@
+class Solution {
+public:
+    vector<vector<int>> kClosest(vector<vector<int>>& points, int K) {
+        map <int,vector<vector<int>>> distCache;
+        vector<vector<int>> result;
+        int square = 0;
+        for(vector<int> coord:points)
+        {
+            square = coord[0]*coord[0] + coord[1]*coord[1];
+            distCache[square].push_back(coord);
+        }
+        for(auto element:distCache)
+        {
+            if(K)
+            {
+                for(vector<int> coord:element.second)
+                {
+                    result.push_back(coord);
+                    K--;
+                }
+            }
+            else
+            {
+                break;
+            }
+        }
+        return result;
+    }
+};
